@@ -1,0 +1,1 @@
+date +"%R %A %d %B %Y" > my_release.txt && cat /etc/os-release >> my_release.txt
