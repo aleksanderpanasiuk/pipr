@@ -1,0 +1,14 @@
+/* the mother of dragons gates */
+	/* Here be dragons! Note that with S3RST any S3 may become S4! */
+	/* Here be dragons! */
+/* Here be dragons: keep last to run last! */
+		 * We are flying near dragons again.
+	 * Beware ye of the dragons, this sequence is magic!
+	 * This is just a security blanket to placate dragons.
+		 * Never show fear in the face of dragons!
+	 * rearrange this structure on a whim, there be dragons ...
+/* WARNING:  here there may be dragons.  reset() applies to both drives,
+		 * Beware, here be dragons!!
+	 * It's dangerous to freeze with locks held; there be dragons there.
+ * This function is wildly self concurrent; here be dragons.
+	 * Here be dragons. The caller has asked to allow only IPI's and not
