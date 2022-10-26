@@ -1,0 +1,1 @@
+grep -e "//ox.ac.uk" zad3data.csv | sed -n -e 's/^\(.*\)\(,http\)\(.*\)$/\1/p' | uniq -c > test.txt | awk -v OFS=' ' '{print $2, $1}' zad3.txt
