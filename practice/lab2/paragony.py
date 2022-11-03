@@ -1,3 +1,6 @@
+import math
+
+
 def split_price(price):
     price_zl = price // 100
     price_gr = price % 100
@@ -65,16 +68,23 @@ def print_receipt(date, reciept):
 
     print(date)
     pos = 1
+    tax_value = 0
 
     for product in reciept:
         print_product(product, pos)
+        tax_value += calculate_praduct_tax(product)
         pos += 1
 
     print('-' * 32)
 
     total_value = get_total_price(reciept)
     formatted_value = format_price(total_value)
+    formatted_tax_value = format_price(tax_value)
+    formatted_total_wtax = format_price(total_value+tax_value)
+
+    print(f"TAX: {formatted_tax_value:>25}")
     print(f"TOTAL: {formatted_value:>23}")
+    print(f"TOTAL+TAX: {formatted_total_wtax:>19}")
 
 
 def get_tax_group(name):
@@ -87,6 +97,24 @@ def get_tax_group(name):
         return 'B'
 
     return 'E'
+
+
+def get_tax_percentage(tax_group):
+    if 'A' == tax_group:
+        return 0.12
+    if 'B' == tax_group:
+        return 0.08
+    if 'E' == tax_group:
+        return 0.22
+
+    return 0
+
+
+def calculate_praduct_tax(product):
+    name = product[0]
+    price = product[1]
+    tax_multiplier = get_tax_percentage(get_tax_group(name))
+    return math.ceil(price * tax_multiplier)
 
 
 my_receipt = [
