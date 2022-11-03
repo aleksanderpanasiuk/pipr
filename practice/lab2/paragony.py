@@ -15,5 +15,16 @@ def print_description(name, price):
     print(description)
 
 
-print_description("oranges", 847)
-print_description("apples", 201)
+def get_product():
+    name = input("Enter product name: ")
+    price = input("Enter price: ")
+
+    return name, int(price)
+
+
+# print_description("oranges", 847)
+# print_description("apples", 201)
+
+product = get_product()
+
+print_description(product[0], product[1])
