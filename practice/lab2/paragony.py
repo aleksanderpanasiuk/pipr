@@ -16,10 +16,18 @@ def print_description(name, price):
 
 
 def get_product():
-    name = input("Enter product name: ")
-    price = input("Enter price: ")
+    product_prices = {
+        "Bananas": 499,
+        "Oranges": 800,
+        "Milk": 315,
+        "Lollipop": 100,
+        "Bread": 509,
+    }
 
-    return name, int(price)
+    name = input("Enter product name: ")
+    amount = input("Enter amount: ")
+
+    return name, int(amount*product_prices.get(name, 0))
 
 
 def get_total_price(receipt):
