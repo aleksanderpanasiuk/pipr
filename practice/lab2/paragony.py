@@ -40,13 +40,32 @@ def format_price(price):
     return f"{zl}.{gr:02}"
 
 
+def print_reciepts(date, reciept):
+    """
+    1. output date
+    2. for each element in reciept output that element
+    3. output line
+    4. output summary
+    """
+    print(date)
+    pos = 1
+
+    for name, price in reciept:
+        price = format_price(price)
+        print(f"{pos:2}. {name:19} {price:>6}")
+        pos += 1
+
+    print('-' * 30)
+
+    total_value = get_total_price(reciept)
+    formatted_value = format_price(total_value)
+    print(f"TOTAL: {formatted_value:>23}")
+
+
 my_receipt = [
     ("Bananas", 499),
-    ("Oranges", 803),
+    ("Oranges", 1803),
     ("Milk", 315)
 ]
 
-my_total_value = get_total_price(my_receipt)
-value_zl, value_gr = split_price(my_total_value)
-
-print(format_price(my_total_value))
+print_reciepts("2022-11-3", my_receipt)
