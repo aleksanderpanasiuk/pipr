@@ -22,9 +22,31 @@ def get_product():
     return name, int(price)
 
 
-# print_description("oranges", 847)
-# print_description("apples", 201)
+def get_total_price(receipt):
+    """
+    Recieves list of items in receipt as input.
+    Returns toal value of receipt.
+    """
+    total_value = 0
 
-product = get_product()
+    for name, price in receipt:
+        total_value += price
 
-print_description(product[0], product[1])
+    return total_value
+
+
+def format_price(price):
+    zl, gr = split_price(price)
+    return f"{zl}.{gr:02}"
+
+
+my_receipt = [
+    ("Bananas", 499),
+    ("Oranges", 803),
+    ("Milk", 315)
+]
+
+my_total_value = get_total_price(my_receipt)
+value_zl, value_gr = split_price(my_total_value)
+
+print(format_price(my_total_value))
