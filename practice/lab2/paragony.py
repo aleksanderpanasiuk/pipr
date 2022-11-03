@@ -15,5 +15,5 @@ def print_description(name, price):
     print(description)
 
 
-# print_description("oranges", 847)
+print_description("oranges", 847)
 print_description("apples", 201)
