@@ -5,7 +5,7 @@ def biggest_sum(substring_length, list):
     current_sum = sum(list[:substring_length])
     max_sum = current_sum
 
-    for i in range(1, len(list)-substring_length):
+    for i in range(0, len(list)-substring_length):
         current_sum += list[i+substring_length]
         current_sum -= list[i]
 
