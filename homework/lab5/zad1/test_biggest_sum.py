@@ -34,3 +34,8 @@ def test_biggest_sum_zero_n():
 def test_biggest_sum_n_bigger_than_list_len():
     list = [2, 1, 3, 7, 6, 9]
     assert biggest_sum(20, list) == 28
+
+
+def test_biggest_sum_n_zero_empyty_list():
+    list = []
+    assert biggest_sum(0, list) == 0
