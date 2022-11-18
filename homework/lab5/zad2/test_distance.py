@@ -1,4 +1,5 @@
 from distance import distance
+import pytest
 
 
 def test_distance_the_same():
@@ -67,3 +68,13 @@ def test_distance_SW_SE():
 
 def test_distance_SW_SE_around():
     assert distance(14, (-13, -6), (5, -2)) == 15
+
+
+def test_distance_first_point_too_big():
+    with pytest.raises(ValueError):
+        distance(4, (21, 2), (1, 1)) == ValueError
+
+
+def test_distance_second_point_too_big():
+    with pytest.raises(ValueError):
+        distance(10, (9, 1), (11, 9)) == ValueError
