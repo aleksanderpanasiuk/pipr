@@ -1,3 +1,6 @@
+from math import sqrt
+
+
 class Planet:
     def __init__(self, x, y, z, name="", no_moons=0):
         if self.check_pos((x, y, z)):
@@ -55,3 +58,12 @@ class Planet:
         x, y, z = self._position
 
         return f"{planet_name} has {moon} and is located at {x}, {y}, {z}."
+
+
+def planet_distance(planet_a, planet_b):
+    x_a, y_a, z_a = planet_a.position()
+    x_b, y_b, z_b = planet_b.position()
+
+    distance = sqrt((x_a-x_b)**2 + (y_a-y_b)**2 + (z_a-z_b)**2)
+
+    return distance
