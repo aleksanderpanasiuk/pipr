@@ -1,4 +1,4 @@
-from planets import Planet
+from planets import Planet, planet_distance
 import pytest
 
 
@@ -65,3 +65,17 @@ def test_planet_description_no_name():
     planet = Planet(3, 1, 0, no_moons=3)
     result = "Unknown planet has 3 moons and is located at 3, 1, 0."
     assert planet.description() == result
+
+
+def test_planet_distance():
+    earth = Planet(3, 0, 0, "Earth", 1)
+    mars = Planet(4, 0, 0, "Mars", 2)
+
+    assert planet_distance(earth, mars) == 1
+
+
+def test_planet_distance2():
+    earth = Planet(3, 0, 3, "Earth", 1)
+    mars = Planet(4, 0, 3, "Mars", 2)
+
+    assert planet_distance(earth, mars) == 1
