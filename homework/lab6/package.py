@@ -1,5 +1,5 @@
 class Package:
-    def __innit__(self, sender, reciever, dimensions, weight):
+    def __init__(self, sender, reciever, dimensions, weight):
         self._sender = sender
         self._reciever = reciever
         self._dimensions = dimensions
