@@ -39,3 +39,19 @@ class Planet:
 
     def set_number_of_moons(self, new_no_moons):
         self._number_of_moons = new_no_moons
+
+    def description(self):
+        planet_name = self._name
+        if not self._name:
+            planet_name = "Unknown planet"
+
+        moon = str(self._number_of_moons) + " moons"
+
+        if self._number_of_moons == 0:
+            moon = "no moons"
+        elif self._number_of_moons == 1:
+            moon = "1 moon"
+
+        x, y, z = self._position
+
+        return f"{planet_name} has {moon} and is located at {x}, {y}, {z}."
