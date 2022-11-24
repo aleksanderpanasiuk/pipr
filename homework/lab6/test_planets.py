@@ -41,3 +41,27 @@ def test_planet_no_moons():
 def test_planet_no_moons_innit():
     planet = Planet(3, 1, 0,  "Ziemia", 31)
     assert planet.number_of_moons() == 31
+
+
+def test_planet_description():
+    planet = Planet(3, 1, 0,  "Ziemia", 31)
+    result = "Ziemia has 31 moons and is located at 3, 1, 0"
+    assert planet.description() == result
+
+
+def test_planet_description_no_moons():
+    planet = Planet(3, 1, 0,  "Ziemia")
+    result = "Ziemia is located at 3, 1, 0"
+    assert planet.description() == result
+
+
+def test_planet_description_one_moon():
+    planet = Planet(3, 1, 0,  "Ziemia", 1)
+    result = "Ziemia has 1 moon and is located at 3, 1, 0"
+    assert planet.description() == result
+
+
+def test_planet_description_no_name():
+    planet = Planet(3, 1, 0, 3)
+    result = "Unknown planet has 3 moons and is located at 3, 1, 0"
+    assert planet.description() == result
