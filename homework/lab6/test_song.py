@@ -32,3 +32,9 @@ def test_song_set_length():
     song = Song("Eminem", "Rap God", 369)
     song.set_length(669)
     assert song.length() == 669
+
+
+def test_song_description():
+    song = Song("Eminem", "Rap God", 369)
+    result = "Rap God by Eminem is 369 seconds long!"
+    assert song.description() == result
