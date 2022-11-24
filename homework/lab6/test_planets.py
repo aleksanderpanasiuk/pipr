@@ -51,7 +51,7 @@ def test_planet_description():
 
 def test_planet_description_no_moons():
     planet = Planet(3, 1, 0,  "Ziemia")
-    result = "Ziemia is located at 3, 1, 0"
+    result = "Ziemia has no moons is located at 3, 1, 0"
     assert planet.description() == result
 
 
