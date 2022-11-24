@@ -69,3 +69,10 @@ def test_package_smallest_dimenstion():
 def test_package_biggest_dimenstion():
     package = Package("abc 12", "das 31", (21, 3, 7), 2)
     assert package.biggest_dimension() == 21
+
+
+def test_package_description():
+    package = Package("abc 12", "das 31", (21, 3, 7), 2)
+    result = "Package sent from abc 12 to das 31 weights 2 kg"
+    result += " and its biggest dimension is 21 and smallest is 3"
+    assert package.description() == result
