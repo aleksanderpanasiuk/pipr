@@ -26,7 +26,7 @@ def test_planet_position():
 
 def test_planet_position_nan():
     with pytest.raises(ValueError):
-        planet = Planet(3, 's', 0,  "Ziemia", no_moons=1)
+        planet = Planet(3, "mars", 0,  "Ziemia", no_moons=1)
         planet.position()
 
 
