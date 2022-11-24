@@ -32,3 +32,9 @@ class Package:
 
     def set_weight(self, new_weight):
         self._weight = new_weight
+
+    def smallest_dimension(self):
+        return min(self._dimensions)
+
+    def biggest_dimension(self):
+        return max(self._dimensions)

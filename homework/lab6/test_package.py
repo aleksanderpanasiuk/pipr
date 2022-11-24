@@ -63,9 +63,9 @@ def test_package_set_weight():
 
 def test_package_smallest_dimenstion():
     package = Package("abc 12", "das 31", (21, 3, 7), 2)
-    assert package.smallest_dimenstion() == 3
+    assert package.smallest_dimension() == 3
 
 
 def test_package_biggest_dimenstion():
     package = Package("abc 12", "das 31", (21, 3, 7), 2)
-    assert package.biggest_dimenstion() == 21
+    assert package.biggest_dimension() == 21
