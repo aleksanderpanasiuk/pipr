@@ -38,3 +38,11 @@ class Package:
 
     def biggest_dimension(self):
         return max(self._dimensions)
+
+    def description(self):
+        result = f"Package sent from {self._sender} to {self._reciever}"
+        result += f" weights {self._weight} kg"
+        result += f" and its biggest dimension is {self.biggest_dimension()}"
+        result += f" and smallest is {self.smallest_dimension()}"
+
+        return result
