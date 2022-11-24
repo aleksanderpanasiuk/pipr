@@ -28,7 +28,7 @@ def test_package_reciever():
 
 def test_package_set_reciever():
     package = Package("abc 12", "das 31", (21, 3, 7), 2)
-    package.set_reciever = "wro 55"
+    package.set_reciever("wro 55")
     assert package.reciever() == "wro 55"
 
 
