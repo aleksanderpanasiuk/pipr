@@ -1,0 +1,12 @@
+[
+    {
+        "path": "sad.txt",
+        "name": "sad.txt",
+        "number_of_lines": 3
+    },
+    {
+        "path": "das.txt",
+        "name": "das.txt",
+        "number_of_lines": 5
+    }
+]
